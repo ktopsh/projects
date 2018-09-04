@@ -58,6 +58,6 @@
 	conn.close();
 	//로그인페이지 이동
 	
-	response.sendRedirect("/jboard1/login.jsp");
+	response.sendRedirect("/jboard1/login.jsp?reg=success");
 
 %>

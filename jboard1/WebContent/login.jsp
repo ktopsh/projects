@@ -1,10 +1,21 @@
 <%@ page  contentType="text/html;charset=UTF-8"   pageEncoding="UTF-8"%>
+<%
+	String reg = request.getParameter("reg");
+%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8">
 		<title>로그인</title>
 		<link rel="stylesheet" href="./css/style.css" />
+		<script>
+			var reg = "<%= reg %>";
+			if(reg == "success"	){
+				alert("회원가입이 완료되었습니다.");
+			}
+		
+		
+		</script>
 	</head>
 	<body>
 		<div id="member">
