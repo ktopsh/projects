@@ -1,9 +1,15 @@
+<%@page import="kr.co.jboard1.Member"%>
 <%@ page  contentType="text/html;charset=UTF-8"   pageEncoding="UTF-8"%>
+<%
+
+	Member user = (Member)session.getAttribute("user");
+
+%>
 <!DOCTYPE html>
 <html>
 	<head>
 		<meta charset="UTF-8" />
-		<title>글목록</title> 
+		<title>글목록</title>
 		<link rel="stylesheet" href="./css/style.css" />
 	</head>
 	<body>
@@ -11,7 +17,9 @@
 			<h3>글목록</h3>
 			<!-- 리스트 -->
 			<div class="list">
-				<p class="logout">홍길동님! 반갑습니다. <a href="#">[로그아웃]</a><p>
+				<p class="logout">
+				<%= user.getNick() %>님! 반갑습니다.
+				<a href="./proc/logout.jsp">[로그아웃]</a><p>
 				<table>
 					<tr>
 						<td>번호</td>
